@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 import './App.css'
 
 // Caminho do modelo (arquivos ficam em /public/model)
-const MODEL_URL = '/model/model.json'
-const METADATA_URL = '/model/metadata.json'
+// BASE_URL respeita o "base" do vite.config (necessário no GitHub Pages)
+const MODEL_URL = import.meta.env.BASE_URL + 'model/model.json'
+const METADATA_URL = import.meta.env.BASE_URL + 'model/metadata.json'
 
 // Nome exato da classe de fadiga no seu modelo (metadata.json -> labels)
 const FATIGUE_LABEL = 'Fatigue'
