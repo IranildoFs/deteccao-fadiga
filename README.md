@@ -1,4 +1,4 @@
-# 🚗 Sistema de Detecção de Fadiga
+# Sistema de Detecção de Fadiga
 
 Projeto React (Vite) que usa um modelo do **Teachable Machine** para detectar fadiga
 pela câmera. Se o motorista ficar **mais de 5 segundos em estado de fadiga**, um
