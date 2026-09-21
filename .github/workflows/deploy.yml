@@ -10,10 +10,11 @@ permissions:
   pages: write
   id-token: write
 
-# Garante um deploy por vez
+# Garante um deploy por vez, sem cancelar deploys em andamento
+# (recomendação oficial do GitHub Pages)
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -25,7 +26,7 @@ jobs:
       - name: Configurar Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Instalar dependências
